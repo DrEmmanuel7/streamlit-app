@@ -39,7 +39,7 @@ path = lottie("robo2hello.json")
 with col2:
     st_lottie(
 path,
-speed=1,q
+speed=1,
 reverse=False,
 loop=True,
 quality="low",
