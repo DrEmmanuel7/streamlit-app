@@ -35,7 +35,7 @@ col1, col2, col3 = st.columns(3)
 col2.title(" :sparkles: Home")
 
 
-path = lottie("robo2 hello.json")
+path = lottie("./robo2 hello.json")
 with col2:
     st_lottie(
 path,

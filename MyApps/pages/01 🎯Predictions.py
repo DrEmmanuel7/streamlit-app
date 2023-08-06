@@ -34,7 +34,7 @@ data_columns = data.columns.to_list()
 def lottie(filepath:str):
     with open(filepath,"r") as f:
         return json5.load(f)
-path = lottie("animation_lky5ete7.json")
+path = lottie("./animation_lky5ete7.json")
 
 num_vars = data.select_dtypes(np.number).columns.to_list()
 cat_vars =data.select_dtypes("object").columns.to_list()
