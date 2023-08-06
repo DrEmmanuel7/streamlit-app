@@ -1,25 +1,10 @@
 import streamlit as st 
 from matplotlib import pyplot as plt
 import seaborn as sns
-import plotly.express as px
-import plotly as plotly
 import pandas as pd
-import streamlit_toggle as tog
-import numpy as np 
-from  st_aggrid import AgGrid
-from PIL import Image
-import altair as alt
-import pygwalker as pyg
 import streamlit.components.v1
-from dtale.views import startup
-from dtale.app import get_instance
 from pycaret.classification import*
-import scikitplot as skplt
-import yellowbrick
-from streamlit_yellowbrick import st_yellowbrick
-from pycaret.classification import*
-
-
+import numpy as np
 
 
 st.set_page_config(

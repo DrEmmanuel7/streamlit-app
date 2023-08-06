@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
-import json
-from PIL import Image
+import json5
+
 
 
 
@@ -29,13 +29,13 @@ st.markdown(hide_footer, unsafe_allow_html=True)
 
 def lottie(filepath:str):
     with open(filepath,"r") as f:
-        return json.load(f)
+        return json5.load(f)
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>',unsafe_allow_html=True)
 col1, col2, col3 = st.columns(3)
 col2.title(" :sparkles: Home")
 
 
-path = lottie(r"C:\MachineLearning\Espace_Projet\HEALTH INSURANCE CROSS SELL PREDICTION\MyApps\robo2 hello.json")
+path = lottie("robo2 hello.json")
 with col2:
     st_lottie(
 path,

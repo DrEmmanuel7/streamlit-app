@@ -1,16 +1,11 @@
 import streamlit as st 
 from matplotlib import pyplot as plt
 import seaborn as sns
-import plotly.express as px
-import plotly as plotly
+import numpy as np
 import pandas as pd
-import streamlit_toggle as tog
-import numpy as np 
-from  st_aggrid import AgGrid
-from PIL import Image
-import altair as alt
+
 from pycaret.classification import*
-import json
+import json5
 from streamlit_lottie import st_lottie
 #from Model_building_steps import data_load
 
@@ -38,8 +33,8 @@ data_columns = data.columns.to_list()
 
 def lottie(filepath:str):
     with open(filepath,"r") as f:
-        return json.load(f)
-path = lottie(r"C:\MachineLearning\Espace_Projet\HEALTH INSURANCE CROSS SELL PREDICTION\MyApps\animation_lky5ete7.json")
+        return json5.load(f)
+path = lottie("animation_lky5ete7.json")
 
 num_vars = data.select_dtypes(np.number).columns.to_list()
 cat_vars =data.select_dtypes("object").columns.to_list()

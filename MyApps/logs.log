@@ -34986,3 +34986,13 @@ dtype: int64},
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
 2023-08-06 04:33:40,551:INFO:Initializing load_model()
 2023-08-06 04:33:40,551:INFO:load_model(model_name=calibrated_tree_ insurance_model, platform=None, authentication=None, verbose=True)
+2023-08-06 08:23:59,052:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-06 08:23:59,052:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-06 08:23:59,052:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-06 08:23:59,052:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-06 08:24:06,869:INFO:Initializing load_model()
+2023-08-06 08:24:06,870:INFO:load_model(model_name=calibrated_tree_ insurance_model, platform=None, authentication=None, verbose=True)
