@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
 import json5
+import sys
+import path
 
 
 
@@ -25,7 +27,8 @@ footer {visibility: hidden;}
 </style>
 """
 st.markdown(hide_footer, unsafe_allow_html=True)
-
+dir = path.Path(__file__).abspath()
+sys.append.path(dir.parent.parent)
 
 def lottie(filepath:str):
     with open(filepath,"r") as f:
