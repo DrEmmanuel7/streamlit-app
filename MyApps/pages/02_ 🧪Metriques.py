@@ -139,37 +139,37 @@ if True:
     
     with tabs[0]:
             
-            st.image("ConfusionMatrix.png")
+            st.image("Confusion Matrix.png")
     with tabs[1]:
             
-            st.image("ClassReport.png")
+            st.image("Class Report.png")
     with tabs[2]:
             
             st.image("AUC.png")
     with tabs[3]:
             
-            st.image("CalibrationCurve.png")
+            st.image("Calibration Curve.png")
     with tabs[4]:
             
-            st.image("LearningCurve.png")
+            st.image("Learning Curve.png")
     with tabs[5]:
             
-            st.image("PredictionError.png")
+            st.image("Prediction Error.png")
     with tabs[6]:
            
-            st.image("PrecisionRecall.png")
+            st.image("Precision Recall.png")
     with tabs[7]:
             
             st.image("Threshold.png")
     with tabs[8]:
             
-            st.image("LiftChart.png")
+            st.image("Lift Chart.png")
     with tabs[9]:
             
-            st.image("GainChart.png")
+            st.image("Gain Chart.png")
     with tabs[10]:
            
-            st.image("KSStatisticPlot.png")
+            st.image("KS Statistic Plot.png")
 
 
 
