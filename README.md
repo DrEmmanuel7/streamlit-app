@@ -1,2 +1,2 @@
 # streamlit-app
-streamlit app to ML prediction in insurance field
+streamlit app to actuarial science and ML .
