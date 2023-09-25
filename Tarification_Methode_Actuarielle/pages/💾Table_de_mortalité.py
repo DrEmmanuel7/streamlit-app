@@ -25,9 +25,9 @@ with st.expander("Info"):
               st.info(""" La table CIMA H est aussi appelé table décès car elle est utilisée pour tarifer les produits décès. Alors que la table CIMA F appelé table vie est utilisée pour tarifer les produits décès. """)
 
  
-cimah = pd.read_excel("Table_mortalite_cima.xlsx", sheet_name="CIMA H", index_col="x")
+cimah = pd.read_excel("Tarification_Methode_Actuarielle/Table_mortalite_cima.xlsx", sheet_name="CIMA H", index_col="x")
 cimah = pd.DataFrame(cimah)
-cimaf = pd.read_excel("Table_mortalite_cima.xlsx", sheet_name="CIMA F", index_col="x")
+cimaf = pd.read_excel("Tarification_Methode_Actuarielle/Table_mortalite_cima.xlsx", sheet_name="CIMA F", index_col="x")
 cimaf = pd.DataFrame(cimaf)
 sheet, code = spreadsheet(cimah, cimaf, df_names=["CIMA H", "CIMA F"])
 st.write(sheet)
