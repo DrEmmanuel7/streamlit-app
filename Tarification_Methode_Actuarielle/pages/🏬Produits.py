@@ -21,9 +21,9 @@ st.markdown(hide_footer, unsafe_allow_html=True)
 
 @st.cache_data()
 def cima_df():
-    cimah = pd.read_excel("Table_mortalite_cima.xlsx", sheet_name="CIMA H")
+    cimah = pd.read_excel("Tarification_Methode_Actuarielle/Table_mortalite_cima.xlsx", sheet_name="CIMA H")
     cimah = pd.DataFrame(cimah)
-    cimaf = pd.read_excel("Table_mortalite_cima.xlsx", sheet_name="CIMA F")
+    cimaf = pd.read_excel("Tarification_Methode_Actuarielle/Table_mortalite_cima.xlsx", sheet_name="CIMA F")
     cimaf = pd.DataFrame(cimaf)
     return cimah, cimaf
 
