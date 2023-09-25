@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from datetime import datetime
+import datetime
 
 
 st.set_page_config(
@@ -52,10 +52,12 @@ Le capital différé est un produit proposé par les compagnies d’assurance vi
         with col2:
               col1, col2   = st.columns(2)
               birth = col1.date_input("Choisir la date de naissance", min_value=pd.to_datetime("1960/08/07"))
-              birth_dict = {"birth":[pd.to_datetime(birth)]}
-              df_birth = pd.DataFrame(birth_dict)
-              aujourd = datetime.now()
-              age = int((aujourd - df_birth["birth"]).astype('<m8[Y]'))
+              
+              # calcul de l'age
+              def from_dob_to_age(born):
+                today = datetime.date.today()
+                return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+              age = from_dob_to_age(birth)
               ageput = col2.number_input("Age(l'age apparait automatique)", min_value=age, max_value=age, value=age)
         
 
@@ -118,10 +120,10 @@ La rente viagère est un produit exclusivement proposé par les compagnies d’a
 
         col1, col2, col3, col4 = st.columns(4)
         birth = col1.date_input("Choisir la date de naissance", min_value=pd.to_datetime("1960/08/07"))
-        birth_dict = {"birth":[pd.to_datetime(birth)]}
-        df_birth = pd.DataFrame(birth_dict)
-        aujourd = datetime.now()
-        age = int((aujourd - df_birth["birth"]).astype('<m8[Y]'))
+        def from_dob_to_age(born):
+            today = datetime.date.today()
+            return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+        age = from_dob_to_age(birth)
         ageput = col2.number_input("Age(l'age apparait automatique)", min_value=age, max_value=age, value=age)
         sex = col3.radio("Sex", options=["Homme", "Femme"], horizontal=True)
         type_rente = col4.checkbox("Anticipé ?", help="la prime de la rente viagère est-elle anticipée c'est-à-dire payable au début de l'année? si la case n'est pas coché alors elle est à termes échus ou payable à la fin de l'année")
@@ -185,10 +187,10 @@ if products =="Vie entière":
         with col2:
               col1, col2   = st.columns(2)
               birth = col1.date_input("Choisir la date de naissance", min_value=pd.to_datetime("1960/08/07"))
-              birth_dict = {"birth":[pd.to_datetime(birth)]}
-              df_birth = pd.DataFrame(birth_dict)
-              aujourd = datetime.now()
-              age = int((aujourd - df_birth["birth"]).astype('<m8[Y]'))
+              def from_dob_to_age(born):
+                today = datetime.date.today()
+                return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+              age = from_dob_to_age(birth)
               ageput = col2.number_input("Age(l'age apparait automatique)", min_value=age, max_value=age, value=age)
         
 
@@ -251,10 +253,10 @@ if products =="Temporaire décès":
         with col2:
               col1, col2   = st.columns(2)
               birth = col1.date_input("Choisir la date de naissance", min_value=pd.to_datetime("1960/08/07"))
-              birth_dict = {"birth":[pd.to_datetime(birth)]}
-              df_birth = pd.DataFrame(birth_dict)
-              aujourd = datetime.now()
-              age = int((aujourd - df_birth["birth"]).astype('<m8[Y]'))
+              def from_dob_to_age(born):
+                today = datetime.date.today()
+                return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+              age = from_dob_to_age(birth)
               ageput = col2.number_input("Age(l'age apparait automatique)", min_value=age, max_value=age, value=age)
         
 
@@ -328,10 +330,10 @@ if products =="produit mixte":
         with col2:
               col1, col2   = st.columns(2)
               birth = col1.date_input("Choisir la date de naissance", min_value=pd.to_datetime("1960/08/07"))
-              birth_dict = {"birth":[pd.to_datetime(birth)]}
-              df_birth = pd.DataFrame(birth_dict)
-              aujourd = datetime.now()
-              age = int((aujourd - df_birth["birth"]).astype('<m8[Y]'))
+              def from_dob_to_age(born):
+                today = datetime.date.today()
+                return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+              age = from_dob_to_age(birth)
               ageput = col2.number_input("Age(l'age apparait automatique)", min_value=age, max_value=age, value=age)
         
 
