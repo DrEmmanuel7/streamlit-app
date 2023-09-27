@@ -31,7 +31,7 @@ def data_load(link):
     return health_data
 
 
-data = data_load(r"C:\Users\HP\MachineLearning\Espace_Projet\HEALTH INSURANCE CROSS SELL PREDICTION\healthinsurancecrosssellpred_train.csv")
+data = data_load("MyApps/healthinsurancecrosssellpred_train.csv")
 health_data = data.copy()
 # the case selecting description de la dataset
 
@@ -139,37 +139,37 @@ if True:
     
     with tabs[0]:
             
-            st.image("img metrics/Confusion Matrix.png")
+            st.image("MyApps/img metrics/Confusion Matrix.png")
     with tabs[1]:
             
-            st.image("img metrics/Class Report.png")
+            st.image("MyApps/img metrics/Class Report.png")
     with tabs[2]:
             
-            st.image("img metrics/AUC.png")
+            st.image("MyApps/img metrics/AUC.png")
     with tabs[3]:
             
-            st.image("img metrics/Calibration Curve.png")
+            st.image("MyApps/img metrics/Calibration Curve.png")
     with tabs[4]:
             
-            st.image("img metrics/Learning Curve.png")
+            st.image("MyApps/img metrics/Learning Curve.png")
     with tabs[5]:
             
-            st.image("img metrics/Prediction Error.png")
+            st.image("MyApps/img metrics/Prediction Error.png")
     with tabs[6]:
            
-            st.image("img metrics/Precision Recall.png")
+            st.image("MyApps/img metrics/Precision Recall.png")
     with tabs[7]:
             
-            st.image("img metrics/Threshold.png")
+            st.image("MyApps/img metrics/Threshold.png")
     with tabs[8]:
             
-            st.image("img metrics/Lift Chart.png")
+            st.image("MyApps/img metrics/Lift Chart.png")
     with tabs[9]:
             
-            st.image("img metrics/Gain Chart.png")
+            st.image("MyApps/img metrics/Gain Chart.png")
     with tabs[10]:
            
-            st.image("img metrics/KS Statistic Plot.png")
+            st.image("MyApps/img metrics/KS Statistic Plot.png")
 
 
 
