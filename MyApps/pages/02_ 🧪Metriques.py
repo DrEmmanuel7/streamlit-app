@@ -5,6 +5,7 @@ import pandas as pd
 import streamlit.components.v1
 from pycaret.classification import*
 import numpy as np
+import joblib
 
 
 st.set_page_config(
