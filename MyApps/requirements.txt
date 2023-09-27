@@ -8,5 +8,4 @@ pandas
 pycaret
 mitosheet
 numpy
-sys
-path
+
