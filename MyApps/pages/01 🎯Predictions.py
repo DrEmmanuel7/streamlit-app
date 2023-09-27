@@ -53,8 +53,9 @@ vars_extra = ["Driving_License", "Previously_Insured"]
 
 @st.cache_data()
 def loading_model():
-    return load_model(model_name="calibrated_tree_ insurance_model")
-
+    chemin_vers_modele = 'MyApps/calibrated_tree_ insurance_model.pkl'
+    modele_charge = joblib.load(chemin_vers_modele)
+    return modele_charge
 model = loading_model()
 def predict(model,input_data):
     prediction = predict_model(model, input_data)
