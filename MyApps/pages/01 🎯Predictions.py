@@ -26,7 +26,7 @@ st.markdown(hide_footer, unsafe_allow_html=True)
 
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>',unsafe_allow_html=True)
 
-data = pd.read_csv(r"C:\Users\HP\MachineLearning\Espace_Projet\HEALTH INSURANCE CROSS SELL PREDICTION\healthinsurancecrosssellpred_train.csv")
+data = pd.read_csv("MyApps/healthinsurancecrosssellpred_train.csv")
 data = data.drop(["Region_Code","Policy_Sales_Channel","id"], axis=1)
 data = data.drop("Response", axis=1)
 data_columns = data.columns.to_list()
@@ -34,7 +34,7 @@ data_columns = data.columns.to_list()
 def lottie(filepath:str):
     with open(filepath,"r") as f:
         return json5.load(f)
-path = lottie("img metrics/animation_lky5ete7.json")
+path = lottie("MyApps/img metrics/animation_lky5ete7.json")
 
 num_vars = data.select_dtypes(np.number).columns.to_list()
 cat_vars =data.select_dtypes("object").columns.to_list()
