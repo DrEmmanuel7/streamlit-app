@@ -32,41 +32,6 @@ def data_load(link):
     return health_data
 
 
-data = data_load("MyApps/healthinsurancecrosssellpred_train.csv")
-health_data = data.copy()
-# the case selecting description de la dataset
-
-def suppress_unknwn_var(health_data) :
-    data = health_data.drop(["id", "Region_Code", "Policy_Sales_Channel"], axis=1)
-    return data
-health_data1 = suppress_unknwn_var(health_data)
-
-
-
-
-if True:
-
-    @st.cache_data()
-    def loading_model():
-        chemin_vers_modele = 'MyApps/calibrated_tree_ insurance_model.pkl'
-        modele_charge = joblib.load(chemin_vers_modele)
-        return modele_charge
-    model = loading_model()
-
-    @st.cache_data(show_spinner=True)
-    def predict(_model):
-        prediction = predict_model(_model)
-        prediction_label = prediction["prediction_label"]
-        prediction_score = prediction["prediction_score"]
-        y_true = prediction["Response"]
-        return y_true, prediction_label, prediction_score
-    
-    
-    y_true, ypred, proba = predict(model)
-
-
-
-
     col1, col2, col3 = st.columns((1,5,1))
     col2.title("🧪 Metriques du Model")
     st.expander("info").info(""" Cette partie concerne plus ceux qui ont des connaissances en data science ou ML.""") 
