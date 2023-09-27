@@ -24,7 +24,7 @@ def data_load(link):
     return health_data
 
 
-data = data_load(r"C:\Users\HP\MachineLearning\Espace_Projet\HEALTH INSURANCE CROSS SELL PREDICTION\healthinsurancecrosssellpred_train.csv")
+data = data_load("MyApps/healthinsurancecrosssellpred_train.csv")
 health_data = data.copy()
 # the case selecting description de la dataset
 @st.cache_data()
