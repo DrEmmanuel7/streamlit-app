@@ -1,8 +1,7 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
 import json5
-import sys
-import path
+
 
 
 
