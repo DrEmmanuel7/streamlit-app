@@ -45,7 +45,12 @@ health_data1 = suppress_unknwn_var(health_data)
 
 if True:
 
-    
+    @st.cache_data()
+    def loading_model():
+        chemin_vers_modele = 'MyApps/calibrated_tree_ insurance_model.pkl'
+        modele_charge = joblib.load(chemin_vers_modele)
+        return modele_charge
+    model = loading_model()
 
     @st.cache_data(show_spinner=True)
     def predict(_model):
@@ -56,7 +61,7 @@ if True:
         return y_true, prediction_label, prediction_score
     
     
-    y_true, ypred, proba = predict(calibrated_model)
+    y_true, ypred, proba = predict(model)
 
 
 
