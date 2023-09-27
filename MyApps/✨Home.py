@@ -26,8 +26,6 @@ footer {visibility: hidden;}
 </style>
 """
 st.markdown(hide_footer, unsafe_allow_html=True)
-dir = path.Path(__file__).abspath()
-sys.append.path(dir.parent.parent)
 
 def lottie(filepath:str):
     with open(filepath,"r") as f:
@@ -37,7 +35,7 @@ col1, col2, col3 = st.columns(3)
 col2.title(" :sparkles: Home")
 
 
-path = lottie("img metrics/robo2 hello.json")
+path = lottie("MyApps/img metrics/robo2 hello.json")
 with col2:
     st_lottie(
 path,
