@@ -1,0 +1,11 @@
+﻿matplotlib
+seaborn
+streamlit-lottie
+streamlit-extras
+json5
+streamlit
+pandas
+pycaret
+mitosheet
+numpy
+joblib
